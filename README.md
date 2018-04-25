@@ -14,7 +14,11 @@ This is intended to be used for any Waymark JavaScript projects (within the main
 First, install this package:
 
 ```
-npx install-peerdeps --dev github:stikdev/eslint-config-waymark@latest
+# For latest
+npm install --save-dev github:stikdev/eslint-config-waymark
+
+# For specific version (preferred)
+npm install --save-dev github:stikdev/eslint-config-waymark#v0.1.0
 ```
 
 Next, create an [ESLint configuration file](https://eslint.org/docs/user-guide/configuring#configuration-file-formats) that
@@ -52,6 +56,31 @@ This is a working spec of our JavaScript styleguide. It is meant (and should be 
 
 * It might be nice to split this out into a `eslint-config-waymark-core`, `eslint-config-waymark-react`, etc. Right now
   there are _a lot_ of peer dependencies when using this.
+
+## Maintaining this project
+
+To publish a new release to this project:
+
+* Make changes and commits as needed
+* Update the Changelog in the README
+* Publish a new version (using [semver](https://semver.org))
+
+```
+npm version v0.1.1
+```
+
+* Push your changes
+* Push your new tag
+
+```
+git push origin v0.1.1
+```
+
+After these steps, someone should be able to install your new version via:
+
+```
+npm install -save-dev github:stikdev/eslint-config-waymark#v0.1.1
+```
 
 ## Changelog
 
