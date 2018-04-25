@@ -56,6 +56,9 @@ This is a working spec of our JavaScript styleguide. It is meant (and should be 
 
 * It might be nice to split this out into a `eslint-config-waymark-core`, `eslint-config-waymark-react`, etc. Right now
   there are _a lot_ of peer dependencies when using this.
+* (Introduced in v0.1.1) Would like to be able to raise a warning if someone defines a static class method via
+  [babel-plugin-transform-class-properties](https://babeljs.io/docs/plugins/transform-class-properties/) without using `this` inside the
+  method. Same functionality as the `babel/no-invalid-this` setting, but something that plays nice with our `babel-eslint` parser.
 
 ## Maintaining this project
 
@@ -87,3 +90,7 @@ npm install -save-dev github:stikdev/eslint-config-waymark#v0.1.1
 ### 0.1.0 / 2018-04-25
 
 * The initial release
+
+### 0.1.1 / 2018-04-25
+
+* Adds `babel-eslint` parser to ensure that static class methods don't cause linting errors.

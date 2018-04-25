@@ -5,12 +5,9 @@ module.exports = {
     // that the ESLint rules do not conflict.
     "eslint-config-prettier"
   ],
+  parser: "babel-eslint",
   plugins: ["babel"],
   rules: {
-    // Both of these babel rules are taking into account
-    // [babel-plugin-transform-class-properties](https://babeljs.io/docs/plugins/transform-class-properties/).
-    "babel/no-invalid-this": "warn",
-    "babel/semi": "warn",
     "no-underscore-dangle": [
       "error",
       {
