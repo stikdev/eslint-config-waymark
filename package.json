@@ -1,11 +1,13 @@
 {
   "name": "eslint-config-waymark",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Waymark's base ESLint configuration.",
   "main": "index.js",
   "author": "Waymark",
   "license": "ISC",
-  "files": [".eslintrc.js"],
+  "files": [
+    ".eslintrc.js"
+  ],
   "peerDependencies": {
     "babel-eslint": "^8.2.3",
     "eslint": ">= 4",
