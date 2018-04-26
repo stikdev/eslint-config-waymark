@@ -21,6 +21,8 @@ npm install --save-dev github:stikdev/eslint-config-waymark
 npm install --save-dev github:stikdev/eslint-config-waymark#v0.1.0
 ```
 
+**Note: *Don't* forget to additionally install the dependencies!**
+
 Next, create an [ESLint configuration file](https://eslint.org/docs/user-guide/configuring#configuration-file-formats) that
 extends from `eslint-config-waymark`:
 
@@ -38,8 +40,6 @@ This is a working spec of our JavaScript styleguide. It is meant (and should be 
 
 ### Notable/preliminary/controversial aspects
 
-* [`no-underscore-dangle`](https://eslint.org/docs/rules/no-underscore-dangle) is basically allowed
-  due to legacy conventions. This could be subject to change.
 * [`class-methods-use-this`](https://eslint.org/docs/rules/class-methods-use-this) is enabled. We currently have a lot of
   legacy code that uses class methods which fail to reference `this`.
 * The [`import/resolver`](https://github.com/benmosher/eslint-plugin-import#resolvers) plugin is not configured to look
@@ -94,3 +94,9 @@ npm install -save-dev github:stikdev/eslint-config-waymark#v0.1.1
 ### 0.1.1 / 2018-04-25
 
 * Adds `babel-eslint` parser to ensure that static class methods don't cause linting errors.
+
+### 0.1.2 / 2018-04-25
+
+* Now enforcing the `no-underscore-dangle` default from eslint-config-airbnb
+* Removes no-longer-necessary peer dependencies
+* Adds required `babel-eslint` peer dependency

@@ -1,32 +1,30 @@
 module.exports = {
   extends: [
     "eslint-config-airbnb",
-    // For JavaScript project's that use Prettier (which should be all of ours), we'll make sure
+    // For JavaScript projects that use Prettier (which should be all of Waymark's), we'll make sure
     // that the ESLint rules do not conflict.
     "eslint-config-prettier"
   ],
+  // Used as the parser to avoid linting errors for things like "class properties"
+  // or other experimental features we add.
   parser: "babel-eslint",
   plugins: ["babel"],
   rules: {
-    "no-underscore-dangle": [
-      "error",
-      {
-        // We currently use this as a 'private' convention everywhere. So, for now this is
-        // disabled. (eslint-config-airbnb override)
-        enforceInMethodNames: false,
-        allowAfterThis: true,
-        allowAfterSuper: true
-      }
-    ],
     "import/no-extraneous-dependencies": [
       "error",
       {
+        // We're going to allow importing of devDependencies strictly because we currently
+        // put *everything* in devDependencies. If we abandon that loosely-held convention,
+        // this rule could definitely be changed to `false` (eslint-config-airbnb's default).
+        // (eslint-config-airbnb override)
         devDependencies: true
       }
     ],
     "no-console": [
       "error",
       {
+        // We want to allow the use of `console.warn` and `console.error`
+        // (eslint-config-airbnb-override)
         allow: ["warn", "error"]
       }
     ],
