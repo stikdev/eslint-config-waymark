@@ -100,3 +100,7 @@ npm install -save-dev github:stikdev/eslint-config-waymark#v0.1.1
 * Now enforcing the `no-underscore-dangle` default from eslint-config-airbnb
 * Removes no-longer-necessary peer dependencies
 * Adds required `babel-eslint` peer dependency
+
+### 0.2.0 / 2019-06-24
+
+* Adds `eslint-plugin-react-hooks` for linting new react components made with hooks
