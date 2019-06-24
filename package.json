@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-waymark",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Waymark's base ESLint configuration.",
   "main": "index.js",
   "author": "Waymark",
