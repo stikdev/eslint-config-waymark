@@ -8,7 +8,7 @@ module.exports = {
   // Used as the parser to avoid linting errors for things like "class properties"
   // or other experimental features we add.
   parser: "babel-eslint",
-  plugins: ["babel"],
+  plugins: ["babel", "react-hooks"],
   rules: {
     "import/no-extraneous-dependencies": [
       "error",
