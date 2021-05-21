@@ -104,3 +104,7 @@ npm install -save-dev github:stikdev/eslint-config-waymark#v0.1.1
 ### 0.2.0 / 2019-06-24
 
 * Adds `eslint-plugin-react-hooks` for linting new react components made with hooks
+
+### 1.0.0 / 2021-05-20
+
+* Updates all dependencies to latest versions
